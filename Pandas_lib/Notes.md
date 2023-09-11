@@ -35,3 +35,9 @@ for symbol in symbols:
             - outer: form union of calling frame’s index (or column if on is specified) with other’s index, and sort it lexicographically.
             - inner: form intersection of calling frame’s index (or column if on is specified) with other’s index, preserving the order of the calling’s one.
             - cross: creates the cartesian product from both frames, preserves the order of the left keys.
+
+```python
+df = df/df.iloc[0, :] #normalize data so values (price) start at 1.0
+df = df.loc[start:end, colums] #slice by rows and columns
+```
+[(Normalized prices example)]('Normalized_prices_example.png')
