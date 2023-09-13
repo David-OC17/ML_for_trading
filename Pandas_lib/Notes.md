@@ -1,5 +1,3 @@
-# General notes
-
 ## Pandas library
 General sintax and functions to know.
 ```python
