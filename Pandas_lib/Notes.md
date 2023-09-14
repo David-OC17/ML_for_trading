@@ -1,5 +1,6 @@
 ## Pandas library
 General sintax and functions to know.
+
 ```python
 import pandas as pd
 
@@ -38,7 +39,7 @@ for symbol in symbols:
 df = df/df.iloc[0, :] #normalize data so values (price) start at 1.0
 df = df.loc[start:end, colums] #slice by rows and columns
 ```
-[(Normalized prices example)]('Normalized_prices_example.png')
+![Normalized prices example]('Normalized_prices_example.png')
 
 
 ## Rolling statistics
@@ -55,7 +56,11 @@ df.pct_change() * 100 #computes daily returns for the dataframe
 ```
 
 ## Incomplete data
+Incomplete data is 'common' in finance. To be able to analyze it normally it has to be filled (fill or drop Nan values).
 
 ```python
+df.fillna(method='ffill', inplace=True) #fills the data forwards, 'inplace' is to save the result in the same dataframe
+df.fillna(method='bfill',...) #backward fill
 
 ```
+![Forward and backward fillna]('fillna_example.png)
