@@ -25,7 +25,7 @@ for symbol in symbols:
 
 ```
 
-* join:
+* **join**:
     how{‘left’, ‘right’, ‘outer’, ‘inner’, ‘cross’}, default ‘left’
 
             - left: use calling frame’s index (or column if on is specified)
@@ -39,3 +39,23 @@ df = df/df.iloc[0, :] #normalize data so values (price) start at 1.0
 df = df.loc[start:end, colums] #slice by rows and columns
 ```
 [(Normalized prices example)]('Normalized_prices_example.png')
+
+
+## Rolling statistics
+Statistics calculated not for the global set of data, but for a 'window' and 'expanded' for the rest of the data set. For example, if one was to compute the _rolling mean_, we would expect the mean to sort of follow the data, but train behind and have a bit of the delay. Commonly, using this kind of statistics (and other combinations) technical indicator are built.
+
+```python
+import pandas as pd
+
+values.rolling(window=window, center=False).mean() #computes the rolling mean for a given dataset and returns the points for it
+# deprecated: pd.stats.moments.rolling_mean(...) 
+
+df.pct_change() * 100 #computes daily returns for the dataframe
+#df['Close'].pct_change * 100
+```
+
+## Incomplete data
+
+```python
+
+```
