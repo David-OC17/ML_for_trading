@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 def symbol_to_path(symbol, base_dir="data"):
     """Return CSV file path given ticker symbol."""
-    return os.path.join(base_dir, "{}.csv".format(str(symbol)))
+    return os.path.join("../"+base_dir, "{}.csv".format(str(symbol)))
 
 
 def get_data(symbols, dates):

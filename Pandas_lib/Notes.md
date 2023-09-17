@@ -39,7 +39,7 @@ for symbol in symbols:
 df = df/df.iloc[0, :] #normalize data so values (price) start at 1.0
 df = df.loc[start:end, colums] #slice by rows and columns
 ```
-![Normalized prices example]('Normalized_prices_example.png')
+![Normalized prices example](./Normalized_prices_example.png)
 
 
 ## Rolling statistics
@@ -63,4 +63,4 @@ df.fillna(method='ffill', inplace=True) #fills the data forwards, 'inplace' is t
 df.fillna(method='bfill',...) #backward fill
 
 ```
-![Forward and backward fillna]('fillna_example.png)
+![Forward and backward fillna](./fillna_example.png)
