@@ -64,3 +64,15 @@ df.fillna(method='bfill',...) #backward fill
 
 ```
 ![Forward and backward fillna](./fillna_example.png)
+
+## Portfolio statistics
+
+For this first section we assume that the return is calculated daily.
+
+```python
+daily_rets = daily_rets[1:] #done to get rid of th zero at the biggining of the columns
+cum_ret = (port_val[-1]/port_val[0])-1 #total return to the period
+avg_daily_ret = daily_ret.mean()
+std_daily_ret = daily_ret.std()
+sharpe_daily_ratio = sqrt(252) * mean(daily_ret - daily_rf)/std(daily_ret)
+```

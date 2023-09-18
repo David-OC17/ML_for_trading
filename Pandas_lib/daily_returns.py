@@ -35,9 +35,6 @@ def plot_data(df, title="Stock prices", xlabel="Date", ylabel="Price"):
 
 
 def compute_daily_returns(df):
-    """Compute and return the daily return values."""
-    # TODO: Your code here
-    # Note: Returned DataFrame must have the same number of rows
     return df.pct_change()*100
 
 
